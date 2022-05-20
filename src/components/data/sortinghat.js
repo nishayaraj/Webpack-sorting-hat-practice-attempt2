@@ -1,3 +1,4 @@
+import createId from '../../scripts/main';
 import studentsOnDom from '../../scripts/components/cards';
 import houses from './houses';
 import students from './studentData';
@@ -13,7 +14,7 @@ const sortStudent = (e) => {
 
     // create the new student object
     students.push({
-      // id: createId(students),
+      id: createId(students),
       name: student.value,
       house: sortingHat.house,
       crest: sortingHat.crest
