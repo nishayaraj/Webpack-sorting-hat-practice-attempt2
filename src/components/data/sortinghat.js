@@ -1,4 +1,4 @@
-import createId from '../../scripts/main';
+import createId from '../../scripts/helpers/createId';
 import studentsOnDom from '../../scripts/components/cards';
 import houses from './houses';
 import students from './studentData';

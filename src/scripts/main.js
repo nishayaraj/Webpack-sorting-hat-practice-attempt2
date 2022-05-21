@@ -1,5 +1,6 @@
 import renderToDOM from './helpers/renderToDom';
 import sortStudent from '../components/data/sortinghat';
+import events from '../components/data/studentData';
 
 // ********** HTML Components  ********** //
 // the basic HMTL structure of app
@@ -52,15 +53,6 @@ const filterBtnRow = () => {
   renderToDOM('#filter-container', domString);
 };
 
-// Create a new ID for the students
-const createId = (array) => {
-  if (array.length) {
-    const idArray = array.map((el) => el.id);
-    return Math.max(...idArray) + 1;
-  }
-  return 0;
-};
-
 // add form to DOM on start-sorting click.
 // Add events for form after the form is on the DOM
 const form = () => {
@@ -90,8 +82,7 @@ const startApp = () => {
   startSortingBtn();
   filterBtnRow(); // filter buttons
   studentAreas(); // students and voldy's army divs
+  events();
 };
 
 startApp();
-
-export default createId;
